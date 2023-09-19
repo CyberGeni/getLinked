@@ -12,7 +12,7 @@ function Navbar() {
           <a href="">Overview</a>
           <a href="">FAQs</a>
           <a href="" className="pr-12">Contact</a>
-          <Link to="/register" className="bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-5 py-3">Register</Link>
+          <Link to="/register" className="bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3">Register</Link>
         </div>
       </nav>
     </div>

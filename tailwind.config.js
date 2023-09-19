@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         clashDisplay: ['Clash Display', 'sans'],
-        montserrat: ['Montserrat', 'sans']
+        montserrat: ['Montserrat', 'sans'],
+        unicaOne: ['Unica One', 'cursive']
       }
     },
   },
