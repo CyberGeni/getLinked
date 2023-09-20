@@ -7,7 +7,7 @@ function Navbar() {
         <h1 className="font-clashDisplay font-bold text-4xl">
           get<span className="text-fuchsia-500">linked</span>
         </h1>
-        <div className="font-montserrat space-x-8">
+        <div className="font-montserrat space-x-8 hidden">
           <a href="">Timeline</a>
           <a href="">Overview</a>
           <a href="">FAQs</a>
