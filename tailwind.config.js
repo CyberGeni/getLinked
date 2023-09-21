@@ -10,8 +10,12 @@ export default {
         clashDisplay: ['Clash Display', 'sans'],
         montserrat: ['Montserrat', 'sans'],
         unicaOne: ['Unica One', 'cursive']
-      }
+      },
+      colors: {
+        'kinda-purple': '#150E28',
+      },
     },
+    
   },
   plugins: [],
 }
