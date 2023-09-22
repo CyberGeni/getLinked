@@ -7,7 +7,7 @@ import womanAndMan from "../assets/images/man-and-woman-standing.png";
 import faqGuy from "../assets/images/faq-guy.png";
 import cup from "../assets/images/cup.png";
 import rewards from "../assets/images/rewards.png";
-
+import partners from "../assets/images/partners-box.png";
 import { Link } from "react-router-dom";
 
 import Faqs from "../components/FAQs";
@@ -220,13 +220,28 @@ function Home() {
               </p>
             </div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-7 gap-16">
-            <img className="md:col-span-3 mx-auto w-4/5 md:w-full" src={cup} alt="" />
+            <img
+              className="md:col-span-3 mx-auto w-4/5 md:w-full"
+              src={cup}
+              alt=""
+            />
             <div className="md:col-span-4 space-y-24">
               <img src={rewards} className="cur pointer-events-none" alt="" />
             </div>
           </div>
+        </div>
+
+        {/* partners and sponsors */}
+        <div className="space-y-4 px-[7.5%] py-16">
+          <h1 className="text-center text-2xl sm:text-3xl xl:text-4xl font-semibold font-clashDisplay">
+            Partners and Sponsors
+          </h1>
+          <p className="text-center max-w-sm mx-auto">
+            Getlinked Hackathon 1.0 is honored to have the following major
+            companies as its partners and sponsors
+          </p>
+          <img className="pointer-events-none" src={partners} alt="" />
         </div>
       </main>
       {/* footer */}
