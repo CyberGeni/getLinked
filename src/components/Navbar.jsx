@@ -4,7 +4,6 @@ import { Fragment, useState } from "react";
 import close from "../assets/images/close-button.png";
 function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
-  console.log(showNavbar);
   return (
     <div>
       <nav className="flex justify-between items-center border-b border-white/20 py-6 px-[7.5%] pt-10">
@@ -42,7 +41,7 @@ function Navbar() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div className="fixed inset-0 bg-black bg-opacity-25" />
+              <div className="fixed inset-0 bg-black bg-opacity-50" />
             </Transition.Child>
 
             <div className="fixed top-0 right-0 left-0 overflow-y-auto">
@@ -56,7 +55,7 @@ function Navbar() {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-kinda-purple p-12 pb-24 shadow-xl transition-all">
+                  <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-lg bg-kinda-purple border border-white border-opacity-5 p-12 pb-24 shadow-xl transition-all backdrop-blur-3xl">
                     <div className="mt-12 space-y-4 flex flex-col items-start text-white w-full">
                       <a href="">Timeline</a>
                       <a href="">Overview</a>
