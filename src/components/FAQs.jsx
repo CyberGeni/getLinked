@@ -50,7 +50,7 @@ function Faqs() {
         {questions.map((question, index) => (
           <div key={question.id}>
             <div
-              className={`py-2.5 flex justify-between items-center cursor-pointer border-b border-fuchsia-500 ${
+              className={`py-2.5 flex justify-between items-end cursor-pointer border-b border-fuchsia-500 ${
                 activeQuestionIndex === index ? "" : ""
               }`}
               onClick={() => handleQuestionClick(index)}
@@ -62,7 +62,7 @@ function Faqs() {
                 viewBox="0 0 11 10"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className={`transform-transform ${
+                className={`transform-transform mb-3 ${
                   activeQuestionIndex === index ? "transform rotate-45" : ""
                 }`}
               >

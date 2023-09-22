@@ -4,6 +4,7 @@ import { Fragment, useState } from "react";
 import close from "../assets/images/close-button.png";
 function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
+
   return (
     <div>
       <nav className="flex justify-between items-center border-b border-white/20 py-6 px-[7.5%] pt-10">

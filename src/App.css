@@ -1,0 +1,14 @@
+/* alignment in the timeline section */
+@media (min-width: 768px) {
+    .timeline div:nth-child(even) .title-section {
+        text-align: left;
+        order: 9999;
+    }
+    .timeline div:nth-child(even) .date-section {
+        text-align: right;
+        order: -9999;
+    }
+    .timeline div:nth-child(odd) .title-section {
+        text-align: right;
+    }
+}

@@ -8,6 +8,7 @@ import faqGuy from "../assets/images/faq-guy.png";
 import { Link } from "react-router-dom";
 
 import Faqs from "../components/FAQs";
+import Timeline from "../components/Timeline";
 
 function Home() {
   return (
@@ -71,12 +72,12 @@ function Home() {
             </h1>
             <p className="max-w-lg mx-auto lg:mx-0 text-sm xl:text-base text-center lg:text-left">
               Our tech hackathon is a melting pot of visionaries, and its
-              purpose is as clear as day: to shape the future. Whether you're a
-              coding genius, a design maverick, or a concept wizard, you'll have
-              the chance to transform your ideas into reality. Solving
-              real-world problems, pushing the boundaries of technology, and
-              creating solutions that can change the world, that's what we're
-              all about!
+              purpose is as clear as day: to shape the future. Whether
+              you&apos;re a coding genius, a design maverick, or a concept
+              wizard, you&apos;ll have the chance to transform your ideas into
+              reality. Solving real-world problems, pushing the boundaries of
+              technology, and creating solutions that can change the world,
+              that&apos;s what we&apos;re all about!
             </p>
           </div>
         </div>
@@ -90,12 +91,12 @@ function Home() {
             </h1>
             <p className="max-w-lg mx-auto lg:mx-0 text-sm xl:text-base text-center lg:text-left">
               Our tech hackathon is a melting pot of visionaries, and its
-              purpose is as clear as day: to shape the future. Whether you're a
-              coding genius, a design maverick, or a concept wizard, you'll have
-              the chance to transform your ideas into reality. Solving
-              real-world problems, pushing the boundaries of technology, and
-              creating solutions that can change the world, that's what we're
-              all about!
+              purpose is as clear as day: to shape the future. Whether
+              you&apos;re a coding genius, a design maverick, or a concept
+              wizard, you&apos;ll have the chance to transform your ideas into
+              reality. Solving real-world problems, pushing the boundaries of
+              technology, and creating solutions that can change the world,
+              that&apos;s what we&apos;re all about!
             </p>
           </div>
           <img
@@ -180,7 +181,25 @@ function Home() {
             </div>
             <Faqs />
           </div>
-          <img className="lg:col-span-2 xl:col-span-3 w-5/6 mx-auto" src={faqGuy} alt="" />
+          <img
+            className="lg:col-span-2 xl:col-span-3 w-5/6 mx-auto"
+            src={faqGuy}
+            alt=""
+          />
+        </div>
+
+        {/* timeline section */}
+        <div className="space-y-12  bg-kinda-purple px-[7.5%] py-16">
+          <div className="text-center space-y-4">
+            <h1 className=" text-2xl sm:text-3xl xl:text-4xl font-semibold font-clashDisplay">
+              Timeline
+            </h1>
+            <p className="max-w-sm mx-auto">
+              Here is the breakdown of the time we anticipate using for the
+              upcoming event.
+            </p>
+          </div>
+          <Timeline />
         </div>
       </main>
       {/* footer */}
