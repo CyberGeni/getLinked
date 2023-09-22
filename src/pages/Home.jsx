@@ -5,6 +5,9 @@ import bulb from "../assets/images/big-bulb.png";
 import woman from "../assets/images/woman-crossed-legs.png";
 import womanAndMan from "../assets/images/man-and-woman-standing.png";
 import faqGuy from "../assets/images/faq-guy.png";
+import cup from "../assets/images/cup.png";
+import rewards from "../assets/images/rewards.png";
+
 import { Link } from "react-router-dom";
 
 import Faqs from "../components/FAQs";
@@ -63,7 +66,7 @@ function Home() {
         </div>
 
         {/* introduction */}
-        <div className="bg-kinda-purple grid lg:grid-cols-2 gap-8 items-center px-[7.5%] py-16 border-b border-white border-opacity-20">
+        <div className=" grid lg:grid-cols-2 gap-8 items-center px-[7.5%] py-16 border-b border-white border-opacity-20">
           <img className="w-3/5 sm:w-2/5 lg:w-4/5 mx-auto" src={bulb} alt="" />
           <div className="space-y-4">
             <h1 className="max-w-sm lg:max-w-none mx-auto text-center lg:text-left text-2xl sm:text-3xl xl:text-5xl font-semibold font-clashDisplay">
@@ -83,7 +86,7 @@ function Home() {
         </div>
 
         {/* rules and guidelines */}
-        <div className="bg-kinda-purple grid lg:grid-cols-2 gap-8 items-center px-[7.5%] py-12 border-b border-white border-opacity-20">
+        <div className="grid lg:grid-cols-2 gap-8 items-center px-[7.5%] py-12 border-b border-white border-opacity-20">
           <div className="space-y-4">
             <h1 className="text-center lg:text-left text-2xl sm:text-3xl xl:text-5xl font-semibold font-clashDisplay">
               Rules and <br />
@@ -107,7 +110,7 @@ function Home() {
         </div>
 
         {/* judging criteria */}
-        <div className="bg-kinda-purple grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-7 lg:gap-8 items-center px-[7.5%] py-16 border-b border-white border-opacity-20">
+        <div className="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-7 lg:gap-8 items-center px-[7.5%] py-16 border-b border-white border-opacity-20">
           <img
             className="w-4/5 md:col-span-2 xl:col-span-4 sm:w-2/5 lg:w-full mx-auto"
             src={womanAndMan}
@@ -189,7 +192,7 @@ function Home() {
         </div>
 
         {/* timeline section */}
-        <div className="space-y-12  bg-kinda-purple px-[7.5%] py-16">
+        <div className="space-y-12 px-[7.5%] py-16">
           <div className="text-center space-y-4">
             <h1 className=" text-2xl sm:text-3xl xl:text-4xl font-semibold font-clashDisplay">
               Timeline
@@ -200,6 +203,30 @@ function Home() {
             </p>
           </div>
           <Timeline />
+        </div>
+
+        {/* prizes and rewards */}
+        <div className="space-y-12 items-end px-[7.5%] py-16">
+          <div className="grid md:grid-cols-7">
+            <div className="col-span-3"></div>
+            <div className="col-span-4 text-center md:text-left space-y-4 mx-auto w-fit">
+              <h1 className=" text-2xl sm:text-3xl xl:text-4xl font-semibold font-clashDisplay">
+                Prizes and <br />
+                <span className="text-fuchsia-500">Rewards</span>
+              </h1>
+              <p className="max-w-sm">
+                Highlight of the prizes or rewards for winners and for
+                participants.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-7 gap-16">
+            <img className="md:col-span-3 mx-auto w-4/5 md:w-full" src={cup} alt="" />
+            <div className="md:col-span-4 space-y-24">
+              <img src={rewards} className="cur pointer-events-none" alt="" />
+            </div>
+          </div>
         </div>
       </main>
       {/* footer */}
