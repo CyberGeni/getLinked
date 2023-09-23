@@ -67,7 +67,7 @@ export default function Register() {
 						</div>
 						<h1 className="text-2xl my-3">CREATE YOUR ACCOUNT</h1>
 						<form
-							action=""
+							onSubmit={handleSubmit}
 							className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4"
 						>
 							<div className="col-span-2 md:col-span-1 flex flex-col space-y-2">
@@ -102,7 +102,7 @@ export default function Register() {
 								</label>
 								<input
 									className="bg-transparent border-white border rounded px-4 py-3 text-white"
-									type="text"
+									type="email"
 									placeholder="Enter your email address"
 									required
                                     name='email'
@@ -170,7 +170,7 @@ export default function Register() {
 									I agree to the terms and conditions and privacy policy
 								</label>
 							</div>
-							<button onClick={handleSubmit} type='submit' className="col-span-2 w-full mx-auto bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3">
+							<button type='submit' className="col-span-2 w-full mx-auto bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3">
 								Register Now{" "}
 							</button>
 						</form>

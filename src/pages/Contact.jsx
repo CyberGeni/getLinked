@@ -1,3 +1,5 @@
+import axios from 'axios'
+import { useState } from 'react'
 import Navbar from "../components/Navbar";
 import facebook from "../assets/images/facebook.png";
 import instagram from "../assets/images/instagram.png";
@@ -5,6 +7,45 @@ import x from "../assets/images/x.png";
 import linkedin from "../assets/images/linkedin.png";
 import back from "../assets/images/back.png";
 function Contact() {
+    const initialState = {
+		teamName: "",
+		phone: "",
+		email: "",
+		topic: "",
+		category: 1,
+		size: 1,
+        privacy: true
+	};
+	const [formData, setFormData] = useState(initialState);
+
+	const handleChange = (e) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value,
+		});
+		console.log('form data', formData);
+	};
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const postData = {
+            team_name: formData.teamName,
+            phone: formData.phone,
+            email: formData.email,
+            project_topic: formData.topic,
+            category: formData.category,
+            group_size: formData.size,
+            privacy_policy_accepted: formData.privacy === "on" ? true : false,
+        }
+        console.log('post data', postData);
+        axios
+        .post('https://backend.getlinked.ai/hackathon/registration', postData)
+        .then((response) => {
+            console.log(response)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    }
 	return (
 		<div className="bg-kinda-purple text-white min-h-screen font-montserrat">
 			<div>
@@ -54,7 +95,7 @@ function Contact() {
 							Questions or need assistance? <br /> Let us know about it!
 						</h1>
                         <p className="my-3 md:hidden">Email us below to any question related to our event</p>
-						<form action="" className="flex flex-col space-y-4">
+						<form onSubmit={handleSubmit} className="flex flex-col space-y-4">
 							<input className="bg-transparent border-white border rounded px-4 py-3 text-white" type="text" placeholder="First Name" required />
 							<input className="bg-transparent border-white border rounded px-4 py-3 text-white" type="text" placeholder="Mail" required/>
 							<input className="bg-transparent border-white border rounded px-4 py-3 text-white" type="number" placeholder="Phone No." required/>
@@ -66,7 +107,7 @@ function Contact() {
 								rows="7"
 								placeholder="Message"
 							></textarea>
-							<button className="w-fit mx-auto bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3">Submit </button>
+							<button type='submit' className="w-fit mx-auto bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3">Submit </button>
 						</form>
 					</div>
 				</main>
