@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 
 import Faqs from "../components/FAQs";
 import Timeline from "../components/Timeline";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -289,6 +290,7 @@ function Home() {
         </div>
       </main>
       {/* footer */}
+      <Footer />
     </div>
   );
 }
