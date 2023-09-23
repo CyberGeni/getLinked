@@ -8,6 +8,7 @@ import faqGuy from "../assets/images/faq-guy.png";
 import cup from "../assets/images/cup.png";
 import rewards from "../assets/images/rewards.png";
 import partners from "../assets/images/partners-box.png";
+import privacyGuy from "../assets/images/privacy-guy.png";
 import { Link } from "react-router-dom";
 
 import Faqs from "../components/FAQs";
@@ -233,7 +234,7 @@ function Home() {
         </div>
 
         {/* partners and sponsors */}
-        <div className="space-y-4 px-[7.5%] py-16">
+        <div className="space-y-4 px-[7.5%] py-28 border-b border-white border-opacity-20">
           <h1 className="text-center text-2xl sm:text-3xl xl:text-4xl font-semibold font-clashDisplay">
             Partners and Sponsors
           </h1>
@@ -242,6 +243,49 @@ function Home() {
             companies as its partners and sponsors
           </p>
           <img className="pointer-events-none" src={partners} alt="" />
+        </div>
+
+        {/* privacy policy */}
+        <div className="px-[7.5%] gap-8 py-28 grid grid-cols-1 lg:grid-cols-2 items-center">
+          <div className="space-y-12">
+            <div className="col-span-4 text-center md:text-left space-y-4 mx-auto md:mx-0 w-fit">
+              <h1 className=" text-2xl sm:text-3xl xl:text-4xl font-semibold font-clashDisplay">
+                Privacy Policy and <br />
+                <span className="text-fuchsia-500">Terms</span>
+              </h1>
+              <p className="text-white/75">Last updated on September 12, 2023</p>
+              <p className="max-w-sm">
+                Below are our privacy & policy, which outline a lot of goodies.
+                it’s our aim to always take of our participant
+              </p>
+            </div>
+            <div className="p-8 md:p-12 border border-fuchsia-500 bg-zinc-300/5 rounded">
+              <p>
+                At getlinked tech Hackathon 1.0, we value your privacy and are
+                committed to protecting your personal information. This Privacy
+                Policy outlines how we collect, use, disclose, and safeguard
+                your data when you participate in our tech hackathon event. By
+                participating in our event, you consent to the practices
+                described in this policy.
+              </p>
+              <h4 className="mt-8 text-lg font-bold text-fuchsia-500">Licensing Policy</h4>
+              <p className="mb-4">Here are terms of our Standard License:</p>
+              <ul className="ml-6 space-y-4 list-image-[url('./assets/images/list-image.png')] list">
+                <li className=" ">
+                  The Standard License grants you a non-exclusive right to
+                  navigate and register for our event
+                </li>
+                <li>
+                  You are licensed to use the item available at any free source
+                  sites, for your project developement
+                </li>
+              </ul>
+              <button className="mt-8 bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3">Read More</button>
+            </div>
+          </div>
+          <div>
+            <img className="w-4/5 mx-auto" src={privacyGuy} alt="" />
+          </div>
         </div>
       </main>
       {/* footer */}
