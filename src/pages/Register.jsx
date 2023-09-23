@@ -46,7 +46,7 @@ export default function Register() {
     }
 	return (
 		<div className="bg-kinda-purple text-white min-h-screen font-montserrat">
-			<div>
+			<div className='max-w-screen-2xl mx-auto'>
 				<div className="hidden md:block">
 					<Navbar />
 				</div>
@@ -55,7 +55,7 @@ export default function Register() {
 				</div>
 				<main className="grid grid-cols-1 md:grid-cols-7 px-[7.5%] md:pr-[7.5%] md:pl-0  pt-2 text-sm mx-auto items-center lg:min-h-[80vh] gap-12">
 					<div className="col-span-1 md:col-span-3">
-						<img className="w-1/3 mx-auto" src={guy} alt="" />
+						<img className="w-1/3 md:w-full mx-auto" src={guy} alt="" />
 					</div>
 					<div className="md:col-span-4 md:bg-white/5 rounded-xl md:p-12 shadow">
 						<h1 className="text-xl font-bold font-clashDisplay text-fuchsia-500 mb-5">

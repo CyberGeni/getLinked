@@ -1,5 +1,5 @@
-import axios from 'axios'
-import { useState } from 'react'
+import axios from "axios";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import facebook from "../assets/images/facebook.png";
 import instagram from "../assets/images/instagram.png";
@@ -7,14 +7,11 @@ import x from "../assets/images/x.png";
 import linkedin from "../assets/images/linkedin.png";
 import back from "../assets/images/back.png";
 function Contact() {
-    const initialState = {
-		teamName: "",
+	const initialState = {
+		name: "",
 		phone: "",
 		email: "",
-		topic: "",
-		category: 1,
-		size: 1,
-        privacy: true
+		message: "",
 	};
 	const [formData, setFormData] = useState(initialState);
 
@@ -23,38 +20,35 @@ function Contact() {
 			...formData,
 			[e.target.name]: e.target.value,
 		});
-		console.log('form data', formData);
+		console.log("form data", formData);
 	};
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const postData = {
-            team_name: formData.teamName,
-            phone: formData.phone,
-            email: formData.email,
-            project_topic: formData.topic,
-            category: formData.category,
-            group_size: formData.size,
-            privacy_policy_accepted: formData.privacy === "on" ? true : false,
-        }
-        console.log('post data', postData);
-        axios
-        .post('https://backend.getlinked.ai/hackathon/registration', postData)
-        .then((response) => {
-            console.log(response)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-    }
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const postData = {
+			first_name: formData.name,
+			phone_number: formData.phone,
+			email: formData.email,
+			messsage: formData.message,
+		};
+		console.log("post data", postData);
+		axios
+			.post("https://backend.getlinked.ai/hackathon/contact-form", postData)
+			.then((response) => {
+				console.log(response);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	};
 	return (
 		<div className="bg-kinda-purple text-white min-h-screen font-montserrat">
-			<div>
-                <div className="hidden md:block">
-                    <Navbar />
-                </div>
+			<div className="max-w-screen-2xl mx-auto">
+				<div className="hidden md:block">
+					<Navbar />
+				</div>
 				<div className="md:hidden">
-                    <img className="w-8 mx-[7.5%] py-8" src={back} alt="" />
-                </div>
+					<img className="w-8 mx-[7.5%] py-8" src={back} alt="" />
+				</div>
 				<main className="grid grid-cols-1 md:grid-cols-7 px-[7.5%] lg:w-11/12 pt-2 text-sm mx-auto items-center lg:min-h-[80vh] gap-12">
 					<div className="col-span-1 md:col-span-3 flex flex-col space-y-4 order-last md:order-none">
 						<h1 className="hidden md:inline text-2xl md:text-3xl lg:text-4xl text-fuchsia-500 font-bold font-clashDisplay">
@@ -94,20 +88,50 @@ function Contact() {
 						<h1 className="text-xl font-bold font-clashDisplay text-fuchsia-500">
 							Questions or need assistance? <br /> Let us know about it!
 						</h1>
-                        <p className="my-3 md:hidden">Email us below to any question related to our event</p>
+						<p className="my-3 md:hidden">
+							Email us below to any question related to our event
+						</p>
 						<form onSubmit={handleSubmit} className="flex flex-col space-y-4">
-							<input className="bg-transparent border-white border rounded px-4 py-3 text-white" type="text" placeholder="First Name" required />
-							<input className="bg-transparent border-white border rounded px-4 py-3 text-white" type="text" placeholder="Mail" required/>
-							<input className="bg-transparent border-white border rounded px-4 py-3 text-white" type="number" placeholder="Phone No." required/>
-							<textarea className="bg-transparent border-white border rounded px-4 py-3 text-white"
+							<input
+								name="name"
+								className="bg-transparent border-white border rounded px-4 py-3 text-white"
+								type="text"
+								placeholder="First Name"
 								required
-                                name=""
+                                onChange={handleChange}
+							/>
+							<input
+								name="email"
+								className="bg-transparent border-white border rounded px-4 py-3 text-white"
+								type="email"
+								placeholder="Mail"
+								required
+                                onChange={handleChange}
+							/>
+							<input
+								name="phone"
+								className="bg-transparent border-white border rounded px-4 py-3 text-white"
+								type="number"
+								placeholder="Phone No."
+								required
+                                onChange={handleChange}
+							/>
+							<textarea
+								className="bg-transparent border-white border rounded px-4 py-3 text-white"
+								required
+								name="message"
 								id=""
 								cols="30"
 								rows="7"
 								placeholder="Message"
+                                onChange={handleChange}
 							></textarea>
-							<button type='submit' className="w-fit mx-auto bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3">Submit </button>
+							<button
+								type="submit"
+								className="w-fit mx-auto bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3"
+							>
+								Submit{" "}
+							</button>
 						</form>
 					</div>
 				</main>

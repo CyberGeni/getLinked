@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import close from "../assets/images/close-button.png";
@@ -6,25 +6,26 @@ function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
 
   return (
-    <div>
+    <div className="max-w-screen-2xl mx-auto">
       <nav className="flex justify-between items-center border-b border-white/20 py-6 px-[7.5%] pt-10">
-        <h1 className="font-clashDisplay font-bold text-3xl lg:text-4xl">
+        <Link to="/" className="font-clashDisplay font-bold text-3xl lg:text-4xl">
           get<span className="text-fuchsia-500">linked</span>
-        </h1>
+        </Link>
         {/* desktop navigation items */}
-        <div className="font-montserrat md:space-x-4 lg:space-x-6 hidden md:flex items-center">
-          <a href="">Timeline</a>
-          <a href="">Overview</a>
-          <a href="">FAQs</a>
-          <Link to="/contact" className="lg:pr-12">
+        <div className="navlinks font-montserrat md:space-x-4 lg:space-x-6 hidden md:flex items-center">
+          <a href="/#timeline">Timeline</a>
+          <a href="/#overview">Overview</a>
+          <a href="/#faqs">FAQs</a>
+          <NavLink to="/contact" className="lg:pr-12 contact">
             Contact
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/register"
-            className="bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3"
+            className="register bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded p-1"
           >
-            Register
-          </Link>
+            <div className=" w-full px-7 py-2 rounded">Register</div>
+            
+          </NavLink>
         </div>
         {/* mobile navigation items */}
         <Transition appear show={showNavbar} as={Fragment}>
