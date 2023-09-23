@@ -57,6 +57,7 @@ function Contact() {
 						<form action="" className="flex flex-col space-y-4">
 							<input className="bg-transparent border-white border rounded px-4 py-3 text-white" type="text" placeholder="First Name" required />
 							<input className="bg-transparent border-white border rounded px-4 py-3 text-white" type="text" placeholder="Mail" required/>
+							<input className="bg-transparent border-white border rounded px-4 py-3 text-white" type="number" placeholder="Phone No." required/>
 							<textarea className="bg-transparent border-white border rounded px-4 py-3 text-white"
 								required
                                 name=""
