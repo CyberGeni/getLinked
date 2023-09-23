@@ -1,10 +1,49 @@
-import { Fragment, useState } from "react";
-import { Listbox, Transition } from "@headlessui/react";
+import axios from 'axios'
+import { useState } from 'react'
 import back from "../assets/images/back.png";
 import Navbar from "../components/Navbar";
 import guy from "../assets/images/3d-graphic-designer-showing-thumbs-up.png";
 import movement from "../assets/images/movement.png";
 export default function Register() {
+	const initialState = {
+		teamName: "",
+		phone: "",
+		email: "",
+		topic: "",
+		category: 1,
+		size: 1,
+        privacy: true
+	};
+	const [formData, setFormData] = useState(initialState);
+
+	const handleChange = (e) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value,
+		});
+		console.log('form data', formData);
+	};
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const postData = {
+            team_name: formData.teamName,
+            phone: formData.phone,
+            email: formData.email,
+            project_topic: formData.topic,
+            category: formData.category,
+            group_size: formData.size,
+            privacy_policy_accepted: formData.privacy === "on" ? true : false,
+        }
+        console.log('post data', postData);
+        axios
+        .post('https://backend.getlinked.ai/hackathon/registration', postData)
+        .then((response) => {
+            console.log(response)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    }
 	return (
 		<div className="bg-kinda-purple text-white min-h-screen font-montserrat">
 			<div>
@@ -27,49 +66,71 @@ export default function Register() {
 							<img className="w-24" src={movement} alt="" />
 						</div>
 						<h1 className="text-2xl my-3">CREATE YOUR ACCOUNT</h1>
-						<form action="" className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+						<form
+							action=""
+							className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4"
+						>
 							<div className="col-span-2 md:col-span-1 flex flex-col space-y-2">
-								<label className="font-bold" htmlFor="">Team&apos;s Name</label>
+								<label className="font-bold" htmlFor="">
+									Team&apos;s Name
+								</label>
 								<input
 									className="bg-transparent border-white border rounded px-4 py-3 text-white"
 									type="text"
 									placeholder="Enter the name of your group"
 									required
+                                    name="teamName"
+                                    onChange={handleChange}
 								/>
 							</div>
 							<div className="col-span-2 md:col-span-1 flex flex-col space-y-2">
-								<label className="font-bold" htmlFor="">Phone</label>
+								<label className="font-bold" htmlFor="">
+									Phone
+								</label>
 								<input
 									className="bg-transparent border-white border rounded px-4 py-3 text-white"
 									type="number"
 									placeholder="Enter your phone number"
 									required
+                                    name='phone'
+                                    onChange={handleChange}
 								/>
 							</div>
 							<div className="col-span-2 md:col-span-1 flex flex-col space-y-2">
-								<label className="font-bold" htmlFor="">Email</label>
+								<label className="font-bold" htmlFor="">
+									Email
+								</label>
 								<input
 									className="bg-transparent border-white border rounded px-4 py-3 text-white"
 									type="text"
 									placeholder="Enter your email address"
 									required
+                                    name='email'
+                                    onChange={handleChange}
 								/>
 							</div>
 							<div className="col-span-2 md:col-span-1 flex flex-col space-y-2">
-								<label className="font-bold" htmlFor="">Project Topic</label>
+								<label className="font-bold" htmlFor="">
+									Project Topic
+								</label>
 								<input
 									className="bg-transparent border-white border rounded px-4 py-3 text-white"
 									type="text"
 									placeholder="What is your group project topic?"
 									required
+                                    name='topic'
+                                    onChange={handleChange}
 								/>
 							</div>
 							<div className="col-span-2 md:col-span-1 flex flex-col space-y-2">
-								<label className="font-bold" htmlFor="">Category</label>
+								<label className="font-bold" htmlFor="">
+									Category
+								</label>
 								<select
 									className="bg-transparent border-white border rounded px-4 py-3 text-white"
-									name=""
+									name="category"
 									id=""
+                                    onChange={handleChange}
 								>
 									<option value="1">1</option>
 									<option value="2">2</option>
@@ -78,11 +139,15 @@ export default function Register() {
 								</select>
 							</div>
 							<div className="col-span-2 md:col-span-1 flex flex-col space-y-2">
-								<label className="font-bold" htmlFor="">Group Size</label>
+								<label className="font-bold" htmlFor="">
+									Group Size
+								</label>
 								<select
 									className="bg-transparent border-white border rounded px-4 py-3 text-white"
-									name=""
+									name="size"
 									id=""
+                                    onChange={handleChange}
+                                    required
 								>
 									<option value="1">1</option>
 									<option value="2">2</option>
@@ -97,15 +162,15 @@ export default function Register() {
 								<input
 									className="transition-all appearance-none w-4 h-4 rounded-sm border checked:outline checked:outline-1 checked:border-none checked:outline-offset-4 checked:bg-gradient-to-l checked:from-purple-600 checked:via-fuchsia-500 checked:to-pink-500"
 									type="checkbox"
-									name=""
-									id=""
-                                    required
+									name="privacy"
+									required
+                                    onChange={handleChange}
 								/>
 								<label htmlFor="">
 									I agree to the terms and conditions and privacy policy
 								</label>
 							</div>
-							<button className="col-span-2 w-full mx-auto bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3">
+							<button onClick={handleSubmit} type='submit' className="col-span-2 w-full mx-auto bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3">
 								Register Now{" "}
 							</button>
 						</form>
