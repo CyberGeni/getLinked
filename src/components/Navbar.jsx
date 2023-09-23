@@ -16,9 +16,9 @@ function Navbar() {
           <a href="">Timeline</a>
           <a href="">Overview</a>
           <a href="">FAQs</a>
-          <a href="" className="lg:pr-12">
+          <Link to="/contact" className="lg:pr-12">
             Contact
-          </a>
+          </Link>
           <Link
             to="/register"
             className="bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3"
