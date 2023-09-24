@@ -59,10 +59,10 @@ function Navbar() {
                 >
                   <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-lg bg-kinda-purple border border-white border-opacity-5 p-12 pb-24 shadow-xl transition-all backdrop-blur-3xl">
                     <div className="mt-12 space-y-4 flex flex-col items-start text-white w-full">
-                      <a href="">Timeline</a>
-                      <a href="">Overview</a>
-                      <a href="">FAQs</a>
-                      <a href="">Contact</a>
+                      <a href="/#timeline" onClick={() => setShowNavbar(!showNavbar)}>Timeline</a>
+                      <a href="/#overview" onClick={() => setShowNavbar(!showNavbar)}>Overview</a>
+                      <a href="/#faqs" onClick={() => setShowNavbar(!showNavbar)}>FAQs</a>
+                      <Link to="/contact" onClick={() => setShowNavbar(!showNavbar)}>Contact</Link>
                       <Link
                         to="/register"
                         className="bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3"
