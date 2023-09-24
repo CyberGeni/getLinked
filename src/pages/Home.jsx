@@ -15,6 +15,7 @@ import yellowBulb from "../assets/images/yellow-bulb.png";
 import chain from "../assets/images/chain.png";
 import banger from "../assets/images/banger.png";
 import whitestar from "../assets/images/white-star.png";
+import curlyArrow from "../assets/images/curly-arrow.png"
 import { Link } from "react-router-dom";
 
 import Faqs from "../components/FAQs";
@@ -99,12 +100,17 @@ function Home() {
 						id="overview"
 						className=" grid lg:grid-cols-2 gap-8 items-center px-[7.5%] py-16 border-b border-white border-opacity-20"
 					>
-						<img
+            <div className="relative">
+              <img
 							className="w-3/5 sm:w-2/5 lg:w-4/5 mx-auto"
 							src={bulb}
 							alt=""
 						/>
-						<div className="space-y-4">
+            <img className="absolute w-12 bottom-5 right-4" src={curlyArrow} alt="" />
+						
+            </div>
+						
+            <div className="space-y-4">
 							<h1 className="max-w-sm lg:max-w-none mx-auto text-center lg:text-left text-2xl sm:text-3xl xl:text-5xl font-semibold font-clashDisplay">
 								Introduction to getlinked{" "}
 								<span className="text-fuchsia-500">tech Hackathon 1.0</span>
