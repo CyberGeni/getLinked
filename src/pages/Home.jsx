@@ -6,7 +6,7 @@ import woman from "../assets/images/woman-crossed-legs.png";
 import womanAndMan from "../assets/images/man-and-woman-standing.png";
 import faqGuy from "../assets/images/faq-guy.png";
 import cup from "../assets/images/cup.png";
-import rewards from "../assets/images/rewards.png";
+import rewards from "../assets/images/prizes.png";
 import partners from "../assets/images/partners-box.png";
 import privacyGuy from "../assets/images/privacy-guy.png";
 import blurb from "../assets/images/bg-blurb.png";
