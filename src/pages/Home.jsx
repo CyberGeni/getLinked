@@ -15,6 +15,8 @@ import yellowBulb from "../assets/images/yellow-bulb.png";
 import chain from "../assets/images/chain.png";
 import banger from "../assets/images/banger.png";
 import whitestar from "../assets/images/white-star.png";
+import greystar from "../assets/images/grey-star.png";
+import purplestar from "../assets/images/purple-star.png";
 import curlyArrow from "../assets/images/curly-arrow.png"
 import { Link } from "react-router-dom";
 
@@ -110,7 +112,7 @@ function Home() {
 						
             </div>
 						
-            <div className="space-y-4">
+            <div className="relative space-y-4">
 							<h1 className="max-w-sm lg:max-w-none mx-auto text-center lg:text-left text-2xl sm:text-3xl xl:text-5xl font-semibold font-clashDisplay">
 								Introduction to getlinked{" "}
 								<span className="text-fuchsia-500">tech Hackathon 1.0</span>
@@ -124,11 +126,12 @@ function Home() {
 								technology, and creating solutions that can change the world,
 								that&apos;s what we&apos;re all about!
 							</p>
+              <img className="absolute w-4 top-8 right-3" src={purplestar} alt="" />
 						</div>
 					</div>
 
 					{/* rules and guidelines */}
-					<div className="grid lg:grid-cols-2 gap-8 items-center px-[7.5%] py-12 border-b border-white border-opacity-20">
+					<div className="relative grid lg:grid-cols-2 gap-8 items-center px-[7.5%] py-12 border-b border-white border-opacity-20">
 						<div className="space-y-4">
 							<h1 className="text-center lg:text-left text-2xl sm:text-3xl xl:text-5xl font-semibold font-clashDisplay">
 								Rules and <br />
@@ -143,6 +146,9 @@ function Home() {
 								technology, and creating solutions that can change the world,
 								that&apos;s what we&apos;re all about!
 							</p>
+              <img className="absolute -top-60 -z-10 opacity-75 w-4/5 -left-36" src={blurbtwo} alt="" />
+              <img className="absolute w-4 top-32 left-[35%]" src={greystar} alt="" />
+              <img className="absolute w-6 bottom-32 left-[50%]" src={whitestar} alt="" />
 						</div>
 						<img
 							className="w-4/5 sm:w-3/5 lg:w-4/5 mx-auto order-first lg:order-last"
