@@ -6,7 +6,7 @@ function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
 
   return (
-    <div className="max-w-screen-2xl mx-auto">
+    <div className="bg-transparent max-w-screen-2xl mx-auto">
       <nav className="flex justify-between items-center border-b border-white/20 py-6 px-[7.5%] pt-10">
         <Link to="/" className="font-clashDisplay font-bold text-3xl lg:text-4xl">
           get<span className="text-fuchsia-500">linked</span>

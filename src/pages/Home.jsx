@@ -9,6 +9,12 @@ import cup from "../assets/images/cup.png";
 import rewards from "../assets/images/rewards.png";
 import partners from "../assets/images/partners-box.png";
 import privacyGuy from "../assets/images/privacy-guy.png";
+import blurb from "../assets/images/bg-blurb.png";
+import blurbtwo from "../assets/images/bg-blurb-purple-2.png";
+import yellowBulb from "../assets/images/yellow-bulb.png";
+import chain from "../assets/images/chain.png";
+import banger from "../assets/images/banger.png";
+import whitestar from "../assets/images/white-star.png";
 import { Link } from "react-router-dom";
 
 import Faqs from "../components/FAQs";
@@ -17,24 +23,42 @@ import Footer from "../components/Footer";
 
 function Home() {
 	return (
-		<div className="bg-kinda-purple text-white min-h-screen font-montserrat">
+		<div className="relative -z-30 bg-kinda-purple text-white min-h-screen font-montserrat">
 			<Navbar />
-			<main className="bg-kinda-purple">
-				<div className="max-w max-w-screen-xl mx-auto">
+			<main className="">
+				<img
+					className=" absolute top-0 opacity-60 w-full max-w-5xl -z-10 object-contain"
+					src={blurb}
+					alt=""
+				/>
+				<img
+					className="absolute w-8 top-44 right-[15%] md:right-[25%] md:top-52 lg:w-10 lg:top-64 lg:right-[55%]"
+					src={yellowBulb}
+					alt=""
+				/>
+        <img className="absolute w-7 left-[10%] top-48" src={whitestar} alt="" />
+				<div className="relative z-0 max-w max-w-screen-2xl mx-auto">
 					{/* hero */}
+
 					<div className="border-b border-white/20">
 						<h2 className="w-fit text-center mx-auto lg:text-right my-10 lg:my-16 lg:mr-8 lg:mt-10 font-montserrat text-base sm:text-xl md:text-3xl lg:text-3xl italic font-bold">
 							Igniting a Revolution in{" "}
 							<span className="w-fit">
 								<span>HR Innovation</span>
-								<img src={underline} className="w-32 sm:w-36 md:w-56 ml-auto" alt="" />
+								<img
+									src={underline}
+									className="w-32 sm:w-36 md:w-56 ml-auto"
+									alt=""
+								/>
 							</span>{" "}
 						</h2>
 						<section className="grid  lg:grid-cols-2 items-center mt-4 lg:mt-0">
 							<div className="lg:pl-[15%] space-y-4 lg:space-y-6 text-center lg:text-left pb-4">
-								<h1 className="sm:max-w-xl lg:max-w-none mx-auto text-5xl sm:text-7xl md:text-[58px] xl:text-[73px] 2xl:text-[86px] xl:-mt-24 leading-none font-bold font-clashDisplay">
+								<h1 className=" sm:max-w-xl lg:max-w-none mx-auto text-5xl sm:text-7xl md:text-[58px] xl:text-[73px] 2xl:text-[86px] xl:-mt-24 leading-none font-bold font-clashDisplay">
 									getlinked Tech Hackathon{" "}
 									<span className="text-fuchsia-500">1.0</span>
+                  <img className="w-8 md:w-10 lg:w-12 xl:w-16 inline lg:absolute ml-1" src={chain} alt="" />
+                  <img className="w-8 md:w-10 lg:w-12 xl:w-16 inline lg:absolute ml-1 lg:ml-12 xl:ml-16" src={banger} alt="" />
 								</h1>
 								<p className="max-w-lg  text-center mx-auto lg:mx-0 lg:text-left text-lg md:text-xl font-montserrat w-5/6 lg:w-4/5">
 									Participate in getlinked tech hackathon 2023 and stand a
@@ -60,6 +84,8 @@ function Home() {
 									</span>
 								</div>
 							</div>
+							{/* <img className="absolute opacity-60 w-1/3 right-4 top-12 -z-10 object-contain" src={blurbtwo} alt="" />
+							 */}
 							<img
 								className="md:w-[90%] ml-auto mb-0 flex items-end justify-end"
 								src={boy}
