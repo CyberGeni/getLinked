@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-// import underline from "../assets/images/hr-innovation-underline.png";
+import underline from "../assets/images/hr-innovation-underline.png";
 import boy from "../assets/images/metaverse-boy.png";
 import bulb from "../assets/images/big-bulb.png";
 import woman from "../assets/images/woman-crossed-legs.png";
@@ -20,14 +20,14 @@ function Home() {
 		<div className="bg-kinda-purple text-white min-h-screen font-montserrat">
 			<Navbar />
 			<main className="bg-kinda-purple">
-				<div className="max-w max-w-screen-2xl mx-auto">
+				<div className="max-w max-w-screen-xl mx-auto">
 					{/* hero */}
 					<div className="border-b border-white/20">
-						<h2 className="text-center mx-auto lg:text-right my-10 lg:my-16 lg:mr-8 lg:mt-10 font-montserrat text-base sm:text-xl md:text-3xl lg:text-3xl italic font-bold">
+						<h2 className="w-fit text-center mx-auto lg:text-right my-10 lg:my-16 lg:mr-8 lg:mt-10 font-montserrat text-base sm:text-xl md:text-3xl lg:text-3xl italic font-bold">
 							Igniting a Revolution in{" "}
 							<span className="w-fit">
 								<span>HR Innovation</span>
-								{/* <img src={underline} className="w-full" alt="" /> */}
+								<img src={underline} className="w-32 sm:w-36 md:w-56 ml-auto" alt="" />
 							</span>{" "}
 						</h2>
 						<section className="grid  lg:grid-cols-2 items-center mt-4 lg:mt-0">
