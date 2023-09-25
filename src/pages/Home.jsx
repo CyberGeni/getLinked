@@ -11,6 +11,7 @@ import partners from "../assets/images/partners-box.png";
 import privacyGuy from "../assets/images/privacy-guy.png";
 import blurb from "../assets/images/bg-blurb.png";
 import blurbtwo from "../assets/images/bg-blurb-purple-2.png";
+import rightBlurb from "../assets/images/right-side-blurb.png";
 import yellowBulb from "../assets/images/yellow-bulb.png";
 import chain from "../assets/images/chain.png";
 import banger from "../assets/images/banger.png";
@@ -146,7 +147,7 @@ function Home() {
 								technology, and creating solutions that can change the world,
 								that&apos;s what we&apos;re all about!
 							</p>
-              <img className="absolute -top-60 -z-10 opacity-75 w-4/5 -left-36" src={blurbtwo} alt="" />
+              <img className="absolute -top-60 -z-10 opacity-50 w-4/5 -left-36" src={blurbtwo} alt="" />
               <img className="absolute w-4 top-32 left-[35%]" src={greystar} alt="" />
               <img className="absolute w-6 bottom-32 left-[50%]" src={whitestar} alt="" />
 						</div>
@@ -155,6 +156,7 @@ function Home() {
 							src={woman}
 							alt=""
 						/>
+            <img className="absolute -z-10 w-1/4 right-0 -bottom-80 opacity-50" src={rightBlurb} alt="" />
 					</div>
 
 					{/* judging criteria */}
@@ -224,8 +226,9 @@ function Home() {
 					{/* faq section */}
 					<div
 						id="faqs"
-						className="grid lg:grid-cols-4 xl:grid-cols-5 items-center px-[7.5%] py-16 border-b border-white border-opacity-20 gap-12"
+						className="relative grid lg:grid-cols-4 xl:grid-cols-5 items-center px-[7.5%] py-16 border-b border-white border-opacity-20 gap-12"
 					>
+            <img className="absolute w-8 top-14 left-[10%]" src={purplestar} alt="" />
 						<div className="lg:col-span-2 space-y-8">
 							<div className="space-y-3">
 								<h1 className=" text-center lg:text-left text-2xl sm:text-3xl xl:text-5xl font-semibold font-clashDisplay">
