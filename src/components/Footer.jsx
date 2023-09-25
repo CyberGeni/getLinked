@@ -5,12 +5,19 @@ import x from "../assets/images/x.png";
 import linkedin from "../assets/images/linkedin.png";
 import phone from "../assets/images/phone.svg";
 import mapPin from "../assets/images/map-pin.svg";
+
+import whitestar from "../assets/images/white-star.png";
+import pinkstar from "../assets/images/pink-star.png";
+import greystar from "../assets/images/grey-star.png";
+import purplestar from "../assets/images/purple-star.png";
+
 export default function Footer() {
 	return (
 		<footer className="max-w-screen-2xl mx-auto relative z-50 text-sm backdrop-blur-md bg-kinda-purple/20 px-[7.5%] py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 			{/* footer info */}
 
 			<div className="col-span-2">
+				<img className="absolute w-4 left-14 top-[40%] animate-pulse" src={whitestar} alt="" />
 				<div className="space-y-4">
 					<h1 className="font-clashDisplay font-bold text-3xl lg:text-4xl">
 						get<span className="text-fuchsia-500">linked</span>
@@ -50,7 +57,7 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className="col-span-2 md:col-span-1">
+			<div className="relative col-span-2 md:col-span-1">
 				<h4 className="text-fuchsia-500 font-bold">Contact Us</h4>
 				<div className="flex flex-col space-y-2 mt-4">
 					<div className="flex items-start space-x-2">
@@ -65,6 +72,8 @@ export default function Footer() {
 						</span>
 					</div>
 				</div>
+				<img className="absolute w-4 right-1 bottom-0 animate-pulse" src={whitestar} alt="" />
+				
 			</div>
 			{/* copyright */}
 			<div className="mt-4 text-center col-span-1 md:col-span-2 lg:col-span-4">
