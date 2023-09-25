@@ -32,16 +32,16 @@ function Home() {
 			<Navbar />
 			<main className="">
 				<img
-					className=" absolute top-0 opacity-60 w-full max-w-5xl -z-10 object-contain"
+					className="animate-pulse absolute top-0 opacity-60 w-full max-w-5xl -z-10 object-contain"
 					src={blurb}
 					alt=""
 				/>
 				<img
-					className="absolute w-8 top-44 right-[15%] md:right-[25%] md:top-52 lg:w-10 lg:top-64 lg:right-[55%]"
+					className="animate-pulse absolute w-8 top-44 right-[15%] md:right-[25%] md:top-52 lg:w-10 lg:top-64 lg:right-[55%]"
 					src={yellowBulb}
 					alt=""
 				/>
-        <img className="absolute w-7 left-[10%] top-48" src={whitestar} alt="" />
+        <img className="animate-pulse absolute w-7 left-[10%] top-48" src={whitestar} alt="" />
 				<div className="relative z-0 max-w max-w-screen-2xl mx-auto">
 					{/* hero */}
 

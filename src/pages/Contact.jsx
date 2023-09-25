@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { useHistory } from "react-router-dom"
 import Navbar from "../components/Navbar";
 import facebook from "../assets/images/facebook.png";
 import instagram from "../assets/images/instagram.png";
@@ -7,6 +8,7 @@ import x from "../assets/images/x.png";
 import linkedin from "../assets/images/linkedin.png";
 import back from "../assets/images/back.png";
 function Contact() {
+	const history = useHistory()
 	const initialState = {
 		name: "",
 		phone: "",
@@ -47,7 +49,7 @@ function Contact() {
 					<Navbar />
 				</div>
 				<div className="md:hidden">
-					<img className="w-8 mx-[7.5%] py-8" src={back} alt="" />
+					<img onClick={history.goBack()} className="w-8 mx-[7.5%] py-8" src={back} alt="" />
 				</div>
 				<main className="grid grid-cols-1 md:grid-cols-7 px-[7.5%] lg:w-11/12 pt-2 text-sm mx-auto items-center lg:min-h-[80vh] gap-12">
 					<div className="col-span-1 md:col-span-3 flex flex-col space-y-4 order-last md:order-none">

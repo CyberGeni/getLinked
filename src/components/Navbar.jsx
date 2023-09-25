@@ -12,7 +12,7 @@ function Navbar() {
           get<span className="text-fuchsia-500">linked</span>
         </Link>
         {/* desktop navigation items */}
-        <div className="navlinks font-montserrat md:space-x-4 lg:space-x-6 hidden md:flex items-center">
+        <div className="relative z-50  navlinks font-montserrat md:space-x-4 lg:space-x-6 hidden md:flex items-center">
           <a href="/#timeline">Timeline</a>
           <a href="/#overview">Overview</a>
           <a href="/#faqs">FAQs</a>
