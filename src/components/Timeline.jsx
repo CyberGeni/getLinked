@@ -1,4 +1,5 @@
 import '../App.css'
+import whitestar from "../assets/images/white-star.png";
 
 function Timeline() {
   const timeline = [
@@ -43,6 +44,7 @@ function Timeline() {
 
   return (
     <div className="relative">
+      <img className='absolute right-[20%] w-6 top-[40%] animate-pulse' src={whitestar} alt="" />
       <div className="w-4/5 mx-auto md:pt-12 relative z-10 space-y-12 md:space-y-8 timeline">
         {/* single position in time */}
         {timeline.map((timeline) => (

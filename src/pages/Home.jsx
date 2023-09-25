@@ -16,6 +16,7 @@ import yellowBulb from "../assets/images/yellow-bulb.png";
 import chain from "../assets/images/chain.png";
 import banger from "../assets/images/banger.png";
 import whitestar from "../assets/images/white-star.png";
+import pinkstar from "../assets/images/pink-star.png";
 import greystar from "../assets/images/grey-star.png";
 import purplestar from "../assets/images/purple-star.png";
 import curlyArrow from "../assets/images/curly-arrow.png"
@@ -160,12 +161,14 @@ function Home() {
 					</div>
 
 					{/* judging criteria */}
-					<div className="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-7 lg:gap-8 items-center px-[7.5%] py-16 border-b border-white border-opacity-20">
+					<div className="relative grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-7 lg:gap-8 items-center px-[7.5%] py-16 border-b border-white border-opacity-20">
 						<img
 							className="w-4/5 md:col-span-2 xl:col-span-4 sm:w-2/5 lg:w-full mx-auto"
 							src={womanAndMan}
 							alt=""
 						/>
+            <img className="absolute -z-10 w-3/5 opacity-50 -bottom-36 -left-12" src={blurbtwo} alt="" />
+            <img className="absolute -z-10 w-2/5 opacity-50 -bottom-[50em] right-0 " src={rightBlurb} alt="" />
 						<div className="space-y-4 lg:col-span-3 xl:col-span-3">
 							<h1 className=" text-center lg:text-left text-2xl sm:text-3xl xl:text-5xl font-semibold font-clashDisplay">
 								Judging Criteria <br />
@@ -228,7 +231,7 @@ function Home() {
 						id="faqs"
 						className="relative grid lg:grid-cols-4 xl:grid-cols-5 items-center px-[7.5%] py-16 border-b border-white border-opacity-20 gap-12"
 					>
-            <img className="absolute w-8 top-14 left-[10%]" src={purplestar} alt="" />
+            <img className="absolute w-6 top-[4%] lg:top-[7.5%] left-[7.5%]" src={purplestar} alt="" />
 						<div className="lg:col-span-2 space-y-8">
 							<div className="space-y-3">
 								<h1 className=" text-center lg:text-left text-2xl sm:text-3xl xl:text-5xl font-semibold font-clashDisplay">
@@ -251,7 +254,7 @@ function Home() {
 					</div>
 
 					{/* timeline section */}
-					<div id="timeline" className="space-y-12 px-[7.5%] py-16">
+					<div id="timeline" className="relative space-y-12 px-[7.5%] py-16">
 						<div className="text-center space-y-4">
 							<h1 className=" text-2xl sm:text-3xl xl:text-4xl font-semibold font-clashDisplay">
 								Timeline
@@ -260,14 +263,16 @@ function Home() {
 								Here is the breakdown of the time we anticipate using for the
 								upcoming event.
 							</p>
+              <img className="absolute w-6 top-36 left-[25%]" src={purplestar} alt="" />
 						</div>
 						<Timeline />
 					</div>
 
 					{/* prizes and rewards */}
-					<div className="space-y-12 items-end px-[7.5%] py-16">
+					<div className="relative space-y-12 items-end px-[7.5%] py-16">
 						<div className="grid md:grid-cols-7">
-							<div className="col-span-3"></div>
+							<img className="absolute w-2/3 -z-10 -left-1" src={blurbtwo} alt="" />
+              <div className="col-span-3"></div>
 							<div className="col-span-4 text-center md:text-left space-y-4 mx-auto w-fit">
 								<h1 className=" text-2xl sm:text-3xl xl:text-4xl font-semibold font-clashDisplay">
 									Prizes and <br />
@@ -279,20 +284,22 @@ function Home() {
 								</p>
 							</div>
 						</div>
-						<div className="grid grid-cols-1 md:grid-cols-7 gap-16">
+						<div className=" grid grid-cols-1 md:grid-cols-7 gap-16">
 							<img
 								className="md:col-span-3 mx-auto w-4/5 md:w-full"
 								src={cup}
 								alt=""
 							/>
-							<div className="md:col-span-4 space-y-24">
+							<div className=" md:col-span-4 space-y-24">
 								<img src={rewards} className="cur pointer-events-none" alt="" />
-							</div>
+                </div>
+              <img className="absolute right-0 w-1/3 top-48 -z-10 opacity-60" src={rightBlurb} alt="" />
+							
 						</div>
 					</div>
 
 					{/* partners and sponsors */}
-					<div className="space-y-4 px-[7.5%] py-28 border-b border-white border-opacity-20">
+					<div className="relative overflow-hidden space-y-4 px-[7.5%] py-28 border-b border-white border-opacity-20">
 						<h1 className="text-center text-2xl sm:text-3xl xl:text-4xl font-semibold font-clashDisplay">
 							Partners and Sponsors
 						</h1>
@@ -300,19 +307,25 @@ function Home() {
 							Getlinked Hackathon 1.0 is honored to have the following major
 							companies as its partners and sponsors
 						</p>
+            <img className="absolute -top-12 -left-48 w-2/3 -z-10 opacity-60" src={blurbtwo} alt="" />
+            <img className="absolute -bottom-48 -right-52 w-2/4 -z-10 opacity-60" src={blurbtwo} alt="" />
 						<img className="pointer-events-none" src={partners} alt="" />
 					</div>
 
 					{/* privacy policy */}
-					<div className="px-[7.5%] gap-8 py-28 grid grid-cols-1 lg:grid-cols-2 items-center">
+					<div className="relative -z-40 px-[7.5%] gap-8 py-28 grid grid-cols-1 lg:grid-cols-2 items-center">
 						<div className="space-y-12">
 							<div className="col-span-4 text-center md:text-left space-y-4 mx-auto md:mx-0 w-fit">
-								<h1 className=" text-2xl sm:text-3xl xl:text-4xl font-semibold font-clashDisplay">
+								<h1 className="w-fit relative text-2xl sm:text-3xl xl:text-4xl font-semibold font-clashDisplay">
 									Privacy Policy and <br />
 									<span className="text-fuchsia-500">Terms</span>
+                  <img className="absolute w-6 -top-6 -right-10 animate-pulse" src={greystar} alt="" />
+                 
 								</h1>
-								<p className="text-white/75">
+								<p className="text-white/75 relative">
 									Last updated on September 12, 2023
+                  <img className="absolute w-6 -right-48  animate-pulse" src={purplestar} alt="" />
+						
 								</p>
 								<p className="max-w-sm">
 									Below are our privacy & policy, which outline a lot of
@@ -342,10 +355,12 @@ function Home() {
 										source sites, for your project developement
 									</li>
 								</ul>
-								<button className="mt-8 bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3">
+								<button className="mx-auto w-fit flex text-center mt-8 bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded px-8 py-3">
 									Read More
 								</button>
 							</div>
+              <img className="absolute -bottom-[20em] w-3/5 -z-10 opacity-50 -left-40" src={blurbtwo} alt="" />
+              <img className="absolute w-6 left-8 bottom-60 animate-pulse" src={pinkstar} alt="" />
 						</div>
 						<div>
 							<img className="w-4/5 mx-auto" src={privacyGuy} alt="" />

@@ -7,7 +7,7 @@ import phone from "../assets/images/phone.svg";
 import mapPin from "../assets/images/map-pin.svg";
 export default function Footer() {
 	return (
-		<footer className="max-w-screen-2xl mx-auto text-sm backdrop-blur-md px-[7.5%] py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+		<footer className="max-w-screen-2xl mx-auto relative z-50 text-sm backdrop-blur-md bg-kinda-purple/20 px-[7.5%] py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 			{/* footer info */}
 
 			<div className="col-span-2">
